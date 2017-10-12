@@ -12,8 +12,7 @@ library(magrittr)
 
 
 sismo_web <- read_html("http://www.ssn.unam.mx/sismicidad/ultimos/", encoding = "utf-8")
-tabla <- html_nodes(sismo_web, "tbody tr")
-num <- html_text(html_nodes(tabla, "td.latest-mag"))
+tabla <- html_nodes(sismo_web, "td.latest-mag")
 
 
 
